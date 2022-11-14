@@ -7,6 +7,7 @@
     --google-image-path: url(../assets/img/google.png);
     --twitter-image-path: url(../assets/img/twitter.png);
     --border-input-hover-color: hsl(299, 100%, 62%);
+    --background-input-hover-color: #454045;
     --background-color: #161717;
     --text-color: white;
     --background-inputs: #212121;
@@ -128,9 +129,9 @@ input {
 
 input:hover,
 input:focus {
-    box-shadow: 0 0 3px 3px var(--border-input-hover-color);
+    box-shadow: 0 0 4px 2px var(--border-input-hover-color);
     outline: var(--border-input-hover-color);
-    background-color: white;
+    background-color: var(--background-input-hover-color);
     transition:
         box-shadow 0.7s,
         background-color 0.7s;
