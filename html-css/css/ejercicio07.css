@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+/* Agregar al root del proyecto principal */
+:root {
+    --login-form: 'Ubuntu', sans-serif;
+    --social-buttons-height: 42px;
+    --google-image-path: url(../assets/img/google.png);
+    --twitter-image-path: url(../assets/img/twitter.png);
+    --border-input-hover-color: hsl(299, 100%, 62%);
+    --background-color: #161717;
+    --text-color: white;
+    --background-inputs: #212121;
+}
+
+.container {
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 15px;
+    font-family: var(--login-form);
+    margin-top: 30px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Social Login Block */
+.container>div:first-of-type {
+    margin-top: 25px;
+    display: flex;
+    column-gap: 20px;
+}
+
+
+.google-btn {
+    background-color: #1A73E8;
+    height: var(--social-buttons-height);
+    color: white;
+    width: 75%;
+    border: none;
+    padding: 0;
+    border-radius: 4px !important;
+}
+
+/* icon google button */
+.google-btn>div {
+    display: inline;
+    position: relative;
+    float: left;
+    left: 4px;
+    background-color: white;
+    height: 38px;
+    width: 38px;
+    border-radius: 4px 0 0 4px;
+    background-image: var(--google-image-path);
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: center;
+}
+
+/*  align the text of button */
+.google-btn span {
+    position: relative;
+    top: calc(100% / 3.5);
+    letter-spacing: .5px;
+}
+
+.twitter-btn {
+    height: var(--social-buttons-height);
+    width: 60px;
+    border: none;
+    border-radius: 4px;
+    background-image: var(--twitter-image-path);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* --------- DIVIDER ---------- */
+.login-form-divider {
+    margin: 35px 0;
+    border: none;
+    padding: 0;
+    text-align: center;
+    border-top: 1px solid var(--text-color);
+    overflow: visible;
+}
+
+.login-form-divider::after {
+    content: "O";
+    position: relative;
+    bottom: 10px;
+    background-color: var(--background-color);
+    padding: 0 20px 0 20px
+}
+
+/* --------FORM --------- */
+
+/* Rules for block of name and username labels and inputs */
+.form-field-group {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 10px;
+}
+
+/*  General set labels */
+label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/*  Rules for label of accept conditions */
+label[for="checkbox"] {
+    display: inline;
+    font-size: 12px;
+    font-weight: 100;
+}
+
+/* General set inputs */
+input {
+    width: 93%;
+    height: 25px;
+    border: none;
+    background-color: var(--background-inputs);
+    margin: 8px 0 35px 0;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+input:hover,
+input:focus {
+    box-shadow: 0 0 3px 3px var(--border-input-hover-color);
+    outline: var(--border-input-hover-color);
+    background-color: white;
+    transition:
+        box-shadow 0.7s,
+        background-color 0.7s;
+}
+
+/* Overdrive for input name and username */
+input[id="name"],
+input[id="username"] {
+    width: 87%;
+}
+
+/*  Rules for checkbox of accept conditions */
+input[id="checkbox"] {
+    width: 20px;
+    display: initial;
+    vertical-align: middle;
+    margin: 0 5px 0 3px;
+}
+
+input[id="checkbox"]:hover,
+input[id="checkbox"]:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+
+input[name="password"]::placeholder {
+    font-size: 16px;
+}
+
+/* Style for form action button */
+#form-submit {
+    width: 100%;
+    height: 50px;
+    padding: 5px;
+    background-color: var(--border-input-hover-color);
+    border: none;
+    border-radius: 10px;
+    color: var(--text-color);
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 40px;
+}
+
+#form-submit:hover, .google-btn:hover, .twitter-btn:hover {
+    opacity: 0.9;
+}
+
+/* Change styles when screen is below 450px make it responsive */
+@media only screen and (max-width:450px) {
+    .form-field-group {
+        flex-direction: column;
+    }
+
+    input[id="name"],
+    input[id="username"] {
+        width: 93%;
+    }
+}
+
+@media only screen and (max-width:280px) {
+    .container {
+        padding-left: 0px;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    .google-btn span {
+        font-size: .7rem;
+    }
+
+    form {
+        padding-left: 0;
+    }
+
+    #form-submit {
+        margin-left: 7px;
+    }
+
+    input[id="checkbox"] {
+        width: 15px;
+    }
+}
