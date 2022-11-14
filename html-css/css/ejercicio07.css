@@ -6,7 +6,7 @@
     --social-buttons-height: 42px;
     --google-image-path: url(../assets/img/google.png);
     --twitter-image-path: url(../assets/img/twitter.png);
-    --border-input-hover-color: hsl(299, 100%, 62%);
+    --border-input-hover-color: hsl(299, 85%, 46%);
     --background-input-hover-color: #454045;
     --background-color: #161717;
     --text-color: white;
@@ -125,6 +125,7 @@ input {
     margin: 8px 0 35px 0;
     padding: 10px 15px;
     border-radius: 10px;
+    color: var(--text-color)
 }
 
 input:hover,
@@ -135,6 +136,7 @@ input:focus {
     transition:
         box-shadow 0.7s,
         background-color 0.7s;
+    color: var(--text-color);
 }
 
 /* Overdrive for input name and username */
