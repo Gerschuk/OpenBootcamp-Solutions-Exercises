@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-modern {
+    width: 20vw;
+    height: 40px;
+    background-color: cornflowerblue;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 10px;
+}
+
+.btn-modern:hover {
+    animation: modern 0.4s forwards;
+}
+
+@keyframes modern {
+    100% {
+        translate: 0 -5px;
+        box-shadow: 0 5px 10px -1px cornflowerblue;
+        background-color: black;
+        color: cornflowerblue;
+    }
+}
